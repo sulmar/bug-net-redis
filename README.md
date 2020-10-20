@@ -39,6 +39,27 @@ monitor
 
 ### Klucze
 
+Dodanie wartości tekstowej
+~~~
+SET event BUG.Net
+~~~
+
+Dodanie wartości liczbowej
+~~~
+SET followers 10
+~~~
+
+Inkrementacja liczby
+~~~
+INCR followers
+~~~
+
+Dekremantacja liczby
+~~~
+DECR followers
+~~~
+
+
 Dodanie wartości
 ~~~
 SET reservation:vehicle-1 Marcin
