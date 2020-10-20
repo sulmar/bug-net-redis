@@ -1,6 +1,10 @@
 # BUG.Net #9 Spotkane Bydgoszcz .Net User Group                             
 Redis - więcej niz cache (.NET Core)
 
+
+### Przykład aplikacji .NET Core + REDIS
+https://github.com/sulmar/redis-autocomplete
+
 ### Uruchomienie Redis w dockerze
 
 ~~~
