@@ -41,24 +41,24 @@ monitor
 
 Dodanie wartości
 ~~~
-SET current:user Marcin
+SET reservation:vehicle-1 Marcin
 ~~~
 Kolejne wywołanie nadpisze poprzednią wartość (update).
 
 Jeśli chcemy tego uniknąć należy dodać atrybut NX
 ~~~
-SET current:user Marcin NX
+SET reservation:vehicle1 Marcin NX
 ~~~
 
 Pobranie wartości
 ~~~
-GET current:user
+GET reservation:vehicle1
 ~~~
 
 
 Usunięcie klucza
 ~~~
-DEL current:user
+DEL reservation:vehicle1
 ~~~
 
 
@@ -66,19 +66,19 @@ DEL current:user
 
 Dodanie wartości na określony czas (TTL)
 ~~~
-set vehicle1 ready ex 120
+set reservation:vehicle1 ready ex 120
 ~~~
 
 Ustawienie czasu życia klucza
 ~~~
-expire vehicle1 60
+expire reservation:vehicle1 60
 ~~~
 
 
 
 Pobranie czasu, który pozostał do wygaśnienia klucza
 ~~~
-ttl vehicle1
+ttl reservation:vehicle1
 ~~~
 
 Pobranie wszystkich kluczy wg szablonu
@@ -91,22 +91,24 @@ keys *
  
  Dodanie 1 do klucza
  ~~~
- incr points
+ incr reservations
  ~~~
  
- Dodanie określonej liczby do klucza
- ~~~
-  incrby points 10
- ~~~
  
  Odjęcie 1 od klucza
  ~~~
- decr points
+ decr reservations
+ ~~~
+ 
+ 
+ Dodanie określonej liczby do klucza
+ ~~~
+  incrby points:user-1 10
  ~~~
  
  Odjęcie określonej liczby do klucza
  ~~~
- decrby points 10
+ decrby points:user-1 10
  ~~~
  
 ### Operacje bitowe
